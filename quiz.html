@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Mental Health Quiz</h1>
+    </header>
+
+    <section>
+        <p>Answer the following questions to get a better understanding of your mental well-being.</p>
+
+        <form id="quiz-form">
+            <label for="q1">1. Do you frequently feel anxious or stressed?</label>
+            <select id="q1">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <br>
+
+            <label for="q2">2. Are you having difficulty sleeping?</label>
+            <select id="q2">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <br>
+
+            <label for="q3">3. Do you have someone to talk to about your feelings?</label>
+            <select id="q3">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <br>
+
+            <button type="button" onclick="submitQuiz()">Submit Quiz</button>
+        </form>
+
+        <p id="quiz-result"></p>
+
+        <button onclick="window.location.href='index.html'">Go Back</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Mental Health Awareness. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function submitQuiz() {
+            const q1 = document.getElementById('q1').value;
+            const q2 = document.getElementById('q2').value;
+            const q3 = document.getElementById('q3').value;
+            let result = '';
+
+            if (q1 === 'yes' || q2 === 'yes') {
+                result = 'It seems like you are feeling some stress. Consider reaching out for help.';
+            } else {
+                result = 'Great! It seems like you are in a good place mentally.';
+            }
+
+            document.getElementById('quiz-result').textContent = result;
+        }
+    </script>
+</body>
+</html>

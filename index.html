@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Awareness</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Mental Health Awareness</h1>
+        <p>Explore mental health resources, take a quiz, and learn more about emotional well-being.</p>
+        <nav>
+            <ul>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#quiz">Take a Quiz</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact Us on +265 887472868</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="resources">
+        <h2>Mental Health Resources</h2>
+        <button onclick="window.location.href='info.html'">Learn More</button>
+    </section>
+
+    <section id="quiz">
+        <h2>Mental Health Quiz</h2>
+        <p>Take this short quiz to assess your mental well-being.</p>
+        <button onclick="window.location.href='quiz.html'">Start Quiz</button>
+    </section>
+
+
+
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <p>"This platform helped me learn how to better manage my stress!" -  A</p>
+        <p>"The resources and community support are amazing." - B</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <br>
+            <label for="message">Message:</label>
+            <textarea id="message" required></textarea>
+            <br>
+            <button onclick="window.location.href='message.html'">send message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Mental Health Awareness. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Redirect after submitting the contact form
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            window.location.href = 'message-received.html';
+        });
+    </script>
+</body>
+</html>
